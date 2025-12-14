@@ -17,9 +17,21 @@ vim.keymap.set("n", "x", '"_x', { noremap = true})
 -- Configs shortcut
 vim.keymap.set("n", "<leader>fc", function()
     require("telescope.builtin").find_files({
-	cwd = vim.fn.stdpath("config"),
+        cwd = vim.fn.stdpath("config"),
     })
 end, { noremap = true, silent = true })
 
--- Terminal
+-- Move between focuses
+vim.keymap.set("n", "<leader>h", "<C-w>h",{noremap = true})
+vim.keymap.set("n", "<leader>l", "<C-w>l",{noremap = true})
 
+-- Moving lines up and down
+vim.keymap.set("n", "<C-k>", ":m .-2<CR>==", {noremap = true, silent = true })
+vim.keymap.set("x", "<C-k>", ":m '<-2<CR>gv=gv", {noremap = true, silent = true })
+
+vim.keymap.set("n", "<C-j>", ":m .+1<CR>==", {noremap = true, silent = true })
+vim.keymap.set("x", "<C-j>", ":m '>+1<CR>gv=gv", {noremap = true, silent = true })
+
+
+-- Save file (due to bad habit and mainly muscle memory) - TODO
+-- vim.keymap.set("n", "<C-s>", ":w<ENTER>", {noremap = true})
