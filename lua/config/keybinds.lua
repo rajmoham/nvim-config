@@ -32,6 +32,13 @@ vim.keymap.set("x", "<C-k>", ":m '<-2<CR>gv=gv", {noremap = true, silent = true 
 vim.keymap.set("n", "<C-j>", ":m .+1<CR>==", {noremap = true, silent = true })
 vim.keymap.set("x", "<C-j>", ":m '>+1<CR>gv=gv", {noremap = true, silent = true })
 
+-- Keep cursor center of screen when finding
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+
+-- Indentation
+vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("v", ">", ">gv")
 
 -- Save file (due to bad habit and mainly muscle memory) - TODO
 -- vim.keymap.set("n", "<C-s>", ":w<ENTER>", {noremap = true})
