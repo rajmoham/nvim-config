@@ -33,3 +33,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.highlight.on_yank()
     end,
 })
+
+-- Blinking Cursor
+vim.o.guicursor = "a:blinkwait700-blinkoff400-blinkon250-Cursor"

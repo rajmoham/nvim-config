@@ -26,11 +26,11 @@ vim.keymap.set("n", "<leader>h", "<C-w>h",{noremap = true})
 vim.keymap.set("n", "<leader>l", "<C-w>l",{noremap = true})
 
 -- Moving lines up and down
-vim.keymap.set("n", "<C-k>", ":m .-2<CR>==", {noremap = true, silent = true })
-vim.keymap.set("x", "<C-k>", ":m '<-2<CR>gv=gv", {noremap = true, silent = true })
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", {noremap = true, silent = true })
+vim.keymap.set("x", "<A-k>", ":m '<-2<CR>gv=gv", {noremap = true, silent = true })
 
-vim.keymap.set("n", "<C-j>", ":m .+1<CR>==", {noremap = true, silent = true })
-vim.keymap.set("x", "<C-j>", ":m '>+1<CR>gv=gv", {noremap = true, silent = true })
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", {noremap = true, silent = true })
+vim.keymap.set("x", "<A-j>", ":m '>+1<CR>gv=gv", {noremap = true, silent = true })
 
 -- Keep cursor center of screen when finding
 vim.keymap.set("n", "n", "nzzzv")
