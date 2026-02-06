@@ -33,6 +33,15 @@ vim.api.nvim_create_autocmd("TextYankPost", {
         vim.highlight.on_yank()
     end,
 })
-
+--
 -- Blinking Cursor
-vim.o.guicursor = "a:blinkwait700-blinkoff400-blinkon250-Cursor"
+vim.o.guicursor = table.concat({
+  "n-v-c:block-blinkwait700-blinkoff400-blinkon250",  -- normal, visual, command
+  "i:ver25-blinkwait700-blinkoff400-blinkon250",      -- insert mode as vertical bar
+  "r:hor20-blinkwait700-blinkoff400-blinkon250",      -- replace mode as horizontal
+  "c:ver25"                                           -- command mode vertical
+}, ",")
+
+-- Whitespace Characters
+vim.o.list = true
+vim.o.listchars = "tab:→ ,trail:#,space:."

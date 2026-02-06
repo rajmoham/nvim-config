@@ -24,14 +24,28 @@ return {
                 lualine_c = {
                     {
                         'filename',
-                        path = 1,
+                        path = 2,
                         symbols = {
                             modified = '[MODIFIED]',
                             readonly = '[READ-ONLY]'
                         }
                     },
                 },
-                lualine_x = {'encoding', 'fileformat', 'filetype'},
+                lualine_x = {
+                    {
+                        'encoding',
+                        separator = ""
+                    },
+                    {
+                        'fileformat',
+                        symbols = {
+                            unix = "[LF]",
+                            dos = "[CRLF]",
+                            mac = "[CR]"
+                        }
+                    },
+                    'filetype'
+                },
                 lualine_y = {'progress'},
                 lualine_z = {'location',}
             },
