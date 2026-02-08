@@ -12,7 +12,11 @@ return {
                     end
 
                     map('n', '<leader>ha', function() gitsigns.setqflist('all') end)
-                    map('n', '<leader>hs', gitsigns.preview_hunk)
+                    map('n', '<leader>hl', function () gitsigns.blame_line({full = true}) end)
+                    map('n', '<leader>hh', gitsigns.preview_hunk)
+                    map('n', '<leader>hn', function() gitsigns.nav_hunk('next') end)
+                    map('n', '<leader>hN', function() gitsigns.nav_hunk('prev') end)
+                    map('n', '<leader>hd', gitsigns.diffthis)
                 end
         }
     end
